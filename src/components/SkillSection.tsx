@@ -1,11 +1,14 @@
 import React from 'react';
+import { LucideIcon } from 'lucide-react';
+
+interface Skill {
+  name: string;
+  icon: LucideIcon;
+}
 
 interface SkillCategory {
   category: string;
-  skills: {
-    name: string;
-    level: number;
-  }[];
+  skills: Skill[];
 }
 
 interface SkillSectionProps {
@@ -21,22 +24,31 @@ const SkillSection: React.FC<SkillSectionProps> = ({ isDark, skills }) => {
           key={category.category}
           className={`p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white shadow-lg'}`}
         >
-          <h3 className="text-xl font-semibold mb-4">{category.category}</h3>
-          <div className="space-y-4">
-            {category.skills.map((skill) => (
-              <div key={skill.name}>
-                <div className="flex justify-between mb-1">
-                  <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{skill.name}</span>
-                  <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{skill.level}%</span>
-                </div>
-                <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                  <div
-                    className="h-full rounded-full bg-blue-500"
-                    style={{ width: `${skill.level}%` }}
+          <h3 className="text-xl font-semibold mb-6">{category.category}</h3>
+          <div className="grid grid-cols-2 gap-4">
+            {category.skills.map((skill) => {
+              const Icon = skill.icon;
+              return (
+                <div
+                  key={skill.name}
+                  className={`flex flex-col items-center p-4 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+                    isDark ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-50 hover:bg-gray-100'
+                  }`}
+                >
+                  <Icon 
+                    size={32} 
+                    className={`mb-2 ${
+                      isDark ? 'text-blue-400' : 'text-blue-600'
+                    }`}
                   />
+                  <span className={`text-sm font-medium ${
+                    isDark ? 'text-gray-300' : 'text-gray-700'
+                  }`}>
+                    {skill.name}
+                  </span>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       ))}

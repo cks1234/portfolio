@@ -20,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDark, activeSection, toggleTheme, s
       <div className="p-4 flex flex-col h-full justify-between">
         <div>
           <h1 className={`text-xl font-bold mb-10 hidden md:block ${isDark ? 'text-white' : 'text-gray-900'} hover:text-blue-500 transition-colors`}>
-            Kwangseok Choi
+            Sam Choi
           </h1>
           <div className="flex flex-col space-y-4">
             {[

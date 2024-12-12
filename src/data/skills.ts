@@ -1,32 +1,40 @@
+import {
+  Braces,
+  Code2,
+  Database,
+  FileJson,
+  Globe,
+  Layout,
+  Server,
+  Terminal,
+  Wind
+} from 'lucide-react';
+
 export const skills = [
   {
     category: "Frontend Development",
     skills: [
-      { name: "React", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Vue.js", level: 80 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "Tailwind CSS", level: 90 }
+      { name: "React", icon: Code2 },
+      { name: "TypeScript", icon: FileJson },
+      { name: "HTML/CSS", icon: Layout },
+      { name: "Tailwind CSS", icon: Wind }
     ]
   },
   {
     category: "Backend Development",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Python", level: 75 },
-      { name: "MongoDB", level: 85 },
-      { name: "PostgreSQL", level: 80 }
+      { name: "Node.js", icon: Server },
+      { name: "Express", icon: Globe },
+      { name: "MongoDB", icon: Database },
+      { name: "PostgreSQL", icon: Database }
     ]
   },
   {
     category: "DevOps & Tools",
     skills: [
-      { name: "Git", level: 90 },
-      { name: "Docker", level: 75 },
-      { name: "AWS", level: 70 },
-      { name: "CI/CD", level: 80 },
-      { name: "Linux", level: 85 }
+      { name: "Git", icon: Braces },
+      { name: "Docker", icon: Terminal },
+      { name: "AWS EC2", icon: Server }
     ]
   }
 ];
