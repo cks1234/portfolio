@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDark, activeSection, toggleTheme, s
             <span className="hidden md:inline text-sm">GitHub</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/kwangseok-choi-933509240/"
+            href="https://www.linkedin.com/in/sam-choi-933509240/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-3 text-gray-400 hover:text-blue-500 transition-colors"
@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDark, activeSection, toggleTheme, s
             <span className="hidden md:inline text-sm">LinkedIn</span>
           </a>
           <a
-            href="/resume.pdf"
+            href="/Sam_choi_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-3 text-gray-400 hover:text-blue-500 transition-colors"
